@@ -1,0 +1,165 @@
+@charset "utf-8";
+@import url("../webfonts/Geometry/stylesheet.css");
+
+body {
+	margin: 0;
+	margin-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: Verdana;
+}
+
+.card {
+  border: none; /* Card kenarlıklarını kaldır */
+  border-radius: 0; /* Köşe yuvarlamalarını kaldır */
+}
+
+h1 {
+    color: #901E5F;
+    font-weight: bold;	
+}
+
+
+.no-link-style {
+  color: inherit;
+  text-decoration: none;
+}
+
+.no-link-style:hover {
+  color: #862058;
+  text-decoration: none;
+   
+}
+
+a {
+  display: inline-block; /* Required for transform to work properly */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+a:hover {
+  transform: translateY(-10px); /* Move up by 1 pixel on hover */
+}
+
+.responsive-video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 oranı için */
+	height: 0;
+	overflow: hidden;
+}
+
+.responsive-video-container video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.card.home_page {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height:250px;
+  text-align:center;  
+  display: flex;
+  flex-direction: column; 
+  overflow: hidden; 
+	border-radius: 10px;
+}
+
+.card-content {
+    display: flex;
+    flex-grow: 1;            /* İçeriğin esnemesini sağlar */
+    align-items: flex-end;   /* İçeriği kartın altına hizalar */
+    justify-content: center; /* Metni yatayda ortalar */
+    margin-top: 20px;        /* Görsel ile içerik arasındaki boşluk */
+}
+
+.card img {
+	padding-top: 10px;
+}
+
+.main-h1 {
+	font-size: 3em;
+}
+
+@media screen and (min-width:1200px) {
+	.card.home_page {
+	  width: 100%;
+	  height: 325px;
+	}
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+	body{
+		font-size: 0.9em;
+		margin: 5px;
+		padding: 5px;
+	}
+	h1 {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width:576px) and (max-width:767px) {
+	body{
+		font-size: 1em;
+		margin: 5px;
+		padding: 5px;
+	}
+	.main-h1 {
+		font-size: 2em;
+	}
+	
+	video::cue(.bg_black) {
+    background-color: black;
+	font-size: 15px;
+}
+
+video::cue(.f_size) {
+	font-size: 15px;
+}
+	.main-row{
+		gap: 5px;
+	}
+	
+	.card img {
+	  padding-top: 10px;
+	  width: 150px;
+	  height: 150px;
+	  margin:auto;
+	}
+	
+	.custom-spacing {
+		margin-bottom: 20px; /* Adjust the value as needed */
+	}
+}
+
+@media screen and (max-width:575px) {
+	body{
+		font-size: 1em;
+		margin: 5px;
+		padding: 5px;
+	}
+	
+	.main-h1 {
+		font-size: 1.5em;
+	}
+	
+	.card.home_page {
+	  width: 50%;
+	  margin: auto;
+		
+	}
+	.card img {
+	  padding-top: 10px; 
+	  width: 150px;
+	  height: 150px;
+	  margin: auto;
+	}
+	
+	.custom-spacing {
+		margin-bottom: 20px; /* Adjust the value as needed */
+	}
+	
+}
+
